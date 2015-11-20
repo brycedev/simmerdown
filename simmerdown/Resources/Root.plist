@@ -6,6 +6,10 @@
 	<array>
 		<dict>
 			<key>cell</key><string>PSGroupCell</string>
+			<key>headerCellClass</key><string>SimmerHeaderCell</string>
+		</dict>
+		<dict>
+			<key>cell</key><string>PSGroupCell</string>
 			<key>label</key><string></string>
             <key>footerText</key><string></string>
 		</dict>
@@ -32,22 +36,41 @@
             <key>PostNotification</key><string>com.brycedev.simmerdown</string>
             <key>validTitles</key><array>
 				<string>ABSO LUTLY</string>
-				<string>Bye | Beautiful Time</string>
+				<string>Bad Hat Harry</string>
+				<string>Bye, Have A Beautiful Time</string>
+				<string>Mutant Enemy</string>
             </array>
             <key>validValues</key><array>
                 <integer>0</integer>
                 <integer>1</integer>
+				<integer>2</integer>
+				<integer>3</integer>
             </array>
         </dict>
 		<dict>
 			<key>cell</key><string>PSGroupCell</string>
-			<key>label</key><string>Developers</string>
+			<key>label</key><string>Developer</string>
 			<key>footerText</key><string></string>
 		</dict>
 		<dict>
 			<key>cell</key><string>PSButtonCell</string>
 			<key>label</key><string>Bryce Jackson (@thebryc3isright)</string>
 			<key>action</key><string>bryceTwitter</string>
+		</dict>
+		<dict>
+			<key>cell</key><string>PSGroupCell</string>
+			<key>label</key>
+			<string>Donate</string><key>footerText</key><string>The Bitcoin/PayPal address will automatically be copied to your pasteboard.</string>
+		</dict>
+		<dict>
+			<key>cell</key><string>PSButtonCell</string>
+			<key>label</key><string>Bitcoin</string>
+			<key>action</key><string>openDonateBitcoin</string>
+		</dict>
+		<dict>
+			<key>cell</key><string>PSButtonCell</string>
+			<key>label</key><string>PayPal</string>
+			<key>action</key><string>openDonatePayPal</string>
 		</dict>
 		<dict>
 			<key>cell</key><string>PSGroupCell</string>

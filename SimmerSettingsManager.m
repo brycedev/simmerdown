@@ -1,6 +1,6 @@
-#import "BDSettingsManager.h"
+#import "SimmerSettingsManager.h"
 
-@implementation BDSettingsManager
+@implementation SimmerSettingsManager
 
 + (instancetype)sharedManager {
     static dispatch_once_t p = 0;
@@ -12,7 +12,7 @@
 }
 
 void prefschanged(CFNotificationCenterRef center, void * observer, CFStringRef name, const void * object, CFDictionaryRef userInfo) {
-    [[BDSettingsManager sharedManager] updateSettings];
+    [[SimmerSettingsManager sharedManager] updateSettings];
 }
 
 - (id)init {
@@ -41,7 +41,11 @@ void prefschanged(CFNotificationCenterRef center, void * observer, CFStringRef n
     if(val == 0){
         return @"abso";
     }else if(val == 1){
+        return @"harry";
+    }else if(val == 2){
         return @"bye";
+    }else if(val == 3){
+        return @"me";
     }
     return @"abso";
 }

@@ -1,4 +1,4 @@
-@interface BDSettingsManager : NSObject
+@interface SimmerSettingsManager : NSObject
 
 @property (nonatomic, copy) NSDictionary *settings;
 

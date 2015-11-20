@@ -1,7 +1,7 @@
 include $(THEOS)/makefiles/common.mk
 
 BUNDLE_NAME = SimmerDown
-SimmerDown_FILES = SMDRootListController.m SMDSourceController.m
+SimmerDown_FILES = SMDRootListController.m SMDSourceController.m SimmerHeaderCell.m
 SimmerDown_INSTALL_PATH = /Library/PreferenceBundles
 SimmerDown_FRAMEWORKS = UIKit
 SimmerDown_PRIVATE_FRAMEWORKS = Preferences

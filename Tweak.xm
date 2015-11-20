@@ -1,20 +1,19 @@
 #import "UIImage+AnimatedGif.h"
-#import "BDSettingsManager.h"
+#import "SimmerSettingsManager.h"
 #define BUNDLE_PATH @"/Library/MobileSubstrate/DynamicLibraries/com.brycedev.simmerdown.bundle"
 
 %hook SBPowerDownController
 
 - (void)powerDownViewRequestPowerDown:(UIView *)view {
-	NSString *source = [[BDSettingsManager sharedManager] source];
+	NSString *source = [[SimmerSettingsManager sharedManager] source];
 	NSBundle *bundle = [[[NSBundle alloc] initWithPath:BUNDLE_PATH] autorelease];
 	NSURL *path = [bundle URLForResource:source withExtension:@"gif"];
 	NSData *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString: [path absoluteString]]];
-	if(imageData != nil && [[BDSettingsManager sharedManager] enabled]){
+	if(imageData != nil && [[SimmerSettingsManager sharedManager] enabled]){
 		UIImage *image = [UIImage animatedImageWithAnimatedGIFData: imageData];
 		CGFloat ow = image.size.width;
 		CGFloat oh = image.size.height;
 		CGFloat ratio = ow / oh;
-		//HBLogInfo(@"the ratio is : %f", ratio);
 		UIImageView *iv = [[UIImageView alloc] init];
 		[iv setFrame: CGRectMake(0,0, view.frame.size.width, view.frame.size.width / ratio )];
 		[iv setContentMode: UIViewContentModeScaleAspectFill];
@@ -51,5 +50,5 @@
 %end
 
 %ctor {
-	[BDSettingsManager sharedManager];
+	[SimmerSettingsManager sharedManager];
 }

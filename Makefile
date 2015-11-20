@@ -1,7 +1,7 @@
 include $(THEOS)/makefiles/common.mk
 
 TWEAK_NAME = SimmerDown
-SimmerDown_FILES = Tweak.xm BDSettingsManager.m UIImage+AnimatedGif.m
+SimmerDown_FILES = Tweak.xm SimmerSettingsManager.m UIImage+AnimatedGif.m
 SimmerDown_FRAMEWORKS = Foundation ImageIO UIKit
 
 include $(THEOS_MAKE_PATH)/tweak.mk

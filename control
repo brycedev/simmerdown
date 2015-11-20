@@ -1,9 +1,9 @@
 Package: com.brycedev.simmerdown
 Name: SimmerDown
-Depends: mobilesubstrate
+Depends: mobilesubstrate, firmware (>= 9.0)
 Version: 1.0
 Architecture: iphoneos-arm
-Description: Adds a post-credit gif to your power down sequence.
+Description: Adds a television, post-credit gif to your power down sequence.
 Maintainer: Bryce Jackson
 Author: Bryce Jackson
 Section: Tweaks
